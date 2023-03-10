@@ -67,6 +67,9 @@ local rust_opts = {
         checkOnSave = {
           command = "clippy",
         },
+        diagnostics = { enable = true,
+                    disabled = {"inactive-code"}
+        },
       },
     },
   },

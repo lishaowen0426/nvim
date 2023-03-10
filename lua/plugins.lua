@@ -66,6 +66,7 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
 
   use 'simrat39/rust-tools.nvim' 
+  use {'mhartington/formatter.nvim', config = function() require'config.formatter' end} 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

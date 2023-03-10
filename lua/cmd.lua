@@ -5,6 +5,11 @@ api.nvim_create_autocmd({"VimLeave"}, {
     command = ":<CR>",
     group = mine,
 })
+api.nvim_create_autocmd({"BufWritePost"}, {
+    pattern = {"*.h", "*.hpp", "*.c", "*.cpp"},
+    command = ":FormatWrite",
+    group = mine,
+})
 
 
 vim.api.nvim_create_user_command('Z', 'w | qa', {desc = 'save and quit all'})
